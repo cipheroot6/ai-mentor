@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Geist } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={`${bricolage.variable} antialiased`}>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
