@@ -50,7 +50,7 @@ const CompanionForm = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     const companion = await createCompanion(values);
-    if (!companion) {
+    if (companion) {
       redirect(`/companions/${companion.id}`);
     } else {
       console.log("Something went wrong");

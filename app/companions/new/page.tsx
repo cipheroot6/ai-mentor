@@ -6,7 +6,7 @@ const NewCompanion = async () => {
   const { userId } = await auth();
 
   if (!userId) {
-    await redirect("/sign-in");
+    redirect("/sign-in");
   }
 
   return (
