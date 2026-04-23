@@ -1,3 +1,5 @@
+export const unstable_instant = false;
+
 import { SignUp } from "@clerk/nextjs";
 
 const SignUpPage = () => {

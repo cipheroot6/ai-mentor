@@ -1,32 +1,12 @@
-export const unstable_instant = { prefetch: 'static' }
+export const unstable_instant = false
 
 import { Suspense } from 'react'
-import { createClient } from '@/utils/supabase/server'
-import { cookies } from 'next/headers'
 
-export default async function Page() {
+export default function Page() {
   return (
     <div>
-      <h1>Supabase Todos</h1>
-      <Suspense fallback={<p>Loading todos...</p>}>
-        <TodoList />
-      </Suspense>
+      <h1>Supabase Demo</h1>
+      <p>This is a placeholder page for Supabase demo.</p>
     </div>
-  )
-}
-
-async function TodoList() {
-  'use cache'
-  const cookieStore = await cookies()
-  const supabase = createClient(cookieStore)
-
-  const { data: todos } = await supabase.from('todos').select()
-
-  return (
-    <ul>
-      {todos?.map((todo) => (
-        <li key={todo.id}>{todo.name}</li>
-      ))}
-    </ul>
   )
 }

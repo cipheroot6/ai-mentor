@@ -1,3 +1,5 @@
+export const unstable_instant = false;
+
 import { SignIn } from "@clerk/nextjs";
 
 const SignInPage = () => {
