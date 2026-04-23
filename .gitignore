@@ -44,5 +44,9 @@ next-env.d.ts
 # AI
 CLAUDE.md
 AGENTS.md
+TODO.md
+ERRORS.md
+MEMORY.md
+
 # clerk configuration (can include secrets)
 /.clerk/
